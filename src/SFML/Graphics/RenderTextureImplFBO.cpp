@@ -305,7 +305,7 @@ bool RenderTextureImplFBO::create(unsigned int width, unsigned int height, unsig
                 return false;
             }
             glCheck(GLEXT_glBindRenderbuffer(GLEXT_GL_RENDERBUFFER, m_colorBuffer));
-            glCheck(GLEXT_glRenderbufferStorageMultisample(GLEXT_GL_RENDERBUFFER, settings.antialiasingLevel, GL_RGBA, width, height));
+            glCheck(GLEXT_glRenderbufferStorageMultisample(GLEXT_GL_RENDERBUFFER, settings.antialiasingLevel, GL_RGBA8, width, height));
 
             // Create the multisample depth/stencil buffer if requested
             if (settings.stencilBits)
